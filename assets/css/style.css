@@ -1,0 +1,21 @@
+.imgbgd {
+    background-image: url("../images/Iron_throne.jpg");
+    background-size: cover
+}
+
+.qtext{
+    color: floralwhite;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px
+}
+
+.atext{
+    color: snow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+.myC {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: crimson;
+}

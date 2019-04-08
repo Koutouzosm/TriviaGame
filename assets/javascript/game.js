@@ -68,9 +68,8 @@ var correct = 0;
 // Function to print all questions to the page
 function renderQuestions() {
   
-  // Empties the quiz form
-  $("#quiz-form").empty();
-
+  // Hides the quiz form till user hits start function
+  $("#quiz-form").hide();
 
 
   // Loops through questions in Array 
@@ -144,15 +143,20 @@ $("#quiz-form").on("change", ".form-check-input", function() {
   
 });
 
+var time = 60;
+var intervalId;
+var rAwn = 0;
+var wAwn = 0;
+
 // my start button to run time and game
 $("#start-triva").on("click", function () {
 
+// Once user hits start-trivia game form will show
+  $("#quiz-form").show();
+
   // Start time function runs with these values
   start();
-    var time = 60;
-    var intervalId;
-    var rAwn = 0;
-    var wAwn = 0;
+
     // Takes time and goes down buy one second
   function decrement() {
       time--;
@@ -160,7 +164,9 @@ $("#start-triva").on("click", function () {
       $("#timer").text(`White walkers will reach the wall in ${time}`);
     // if timer hits 0 STOP the game
       if (time === 0) {
+        // Stops the clock
           stop();
+
     // checking user awnser
           for (var i = 0; i < questions.length; i++) {
           //if user awnser === answer 
